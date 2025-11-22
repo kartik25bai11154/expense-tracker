@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Expense</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Edit Expense</h1>
+
+<form method="POST" class="form-box">
+    <label>Title</label>
+    <input type="text" name="title" value="{{ expense[1] }}" required>
+
+    <label>Amount (₹)</label>
+    <input type="number" name="amount" value="{{ expense[2] }}" required>
+
+    <label>Category</label>
+    <select name="category">
+        <option {{ 'selected' if expense[3]=='Food' }}>Food</option>
+        <option {{ 'selected' if expense[3]=='Travel' }}>Travel</option>
+        <option {{ 'selected' if expense[3]=='Shopping' }}>Shopping</option>
+        <option {{ 'selected' if expense[3]=='Bills' }}>Bills</option>
+        <option {{ 'selected' if expense[3]=='Other' }}>Other</option>
+    </select>
+
+    <label>Date</label>
+    <input type="date" name="date" value="{{ expense[4] }}" required>
+
+    <button type="submit">Update</button>
+</form>
+
+<a class="back" href="/">← Back</a>
+
+</body>
+</html>
