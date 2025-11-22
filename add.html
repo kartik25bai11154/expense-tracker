@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <body>
+    <!-- Floating Money Stickers -->
+    <div class="sticker">💰</div>
+    <div class="sticker">💵</div>
+    <div class="sticker">💸</div>
+    <div class="sticker">🪙</div>
+    <div class="sticker">💳</div>
+    <div class="sticker">📊</div>
+    
+    <h1>Expense Tracker</h1>
+    <!-- rest of your HTML -->
+
+<h1>Add Expense</h1>
+
+<form method="POST">
+    <label>Title</label>
+    <input type="text" name="title" required>
+
+    <label>Amount (₹)</label>
+    <input type="number" name="amount" step="0.01" required>
+
+    <label>Date</label>
+    <input type="date" name="date" required>
+
+    <button type="submit">Add Expense</button>
+</form>
+
+<br>
+<a class="back" href="/">Back</a>
+
+</body>
+</html>
